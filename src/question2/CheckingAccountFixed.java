@@ -23,15 +23,11 @@ public class CheckingAccountFixed {
 
     public static void main(String[] args) {
         final CheckingAccountFixed ca=new CheckingAccountFixed(100);
-
-        Runnable r=new Runnable() {
-            @Override
-            public void run() {
-                String name=Thread.currentThread().getName();
-                for(int i=0;i<10;i++)
-                    System.out.println(name + " withdraw &10: "+
-                            ca.withdraw(10));
-            }
+        Runnable r= () -> {
+            String name=Thread.currentThread().getName();
+            for(int i=0;i<10;i++)
+                System.out.println(name + " withdraw &10: "+
+                        ca.withdraw(10));
         };
 
         Thread thread=new Thread(r);

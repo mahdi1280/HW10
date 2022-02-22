@@ -4,12 +4,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Files;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         long start= System.currentTimeMillis();
-        File ff=new File("D:\\دیج کالا\\مهپاش میست اسپری");
+        File ff=new File("test");//todo D:\دیج کالا\مهپاش میست اسپری
         long size=0;
         for(File f:ff.listFiles()) {
             try(FileInputStream fileInputStream = new FileInputStream(f);) {

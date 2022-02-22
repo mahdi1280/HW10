@@ -27,16 +27,16 @@ public class StarvationDemo {
     }
 
     private static class ProgressThread extends Thread {
-        JProgressBar progressBar;
+        private JProgressBar progressBar;
 
-        ProgressThread () {
+        public ProgressThread () {
             progressBar = new JProgressBar();
             progressBar.setString(this.getName());
             progressBar.setStringPainted(false);
-            progressBar.setBackground(Color.black);
+            progressBar.setBackground(Color.WHITE);
         }
 
-        JComponent getProgressComponent () {
+        public JComponent getProgressComponent () {
             return progressBar;
         }
 

@@ -6,7 +6,6 @@ public class IntSleep extends Thread {
 
     @Override
     public void run() {
-
         while (true) {
             if (isFinish) {
                 System.out.println("Hello");
